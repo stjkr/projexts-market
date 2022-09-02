@@ -103,13 +103,13 @@ header {
 }
 
 .link {
-    font-size: 24px;
+    font-size: 22px;
     margin: auto;
     transition: transform 0.75s;
     padding: 12px 32px;
     border-radius: 10px;
     background: #111111;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     color: var(--light-ft);
 }
 
@@ -197,7 +197,7 @@ header {
 
 .section-2 .box{
     /* height: 300px; */
-    padding: 50px;
+    padding: 25px;
     /* width: 80%; */
     border-radius: 25px;
     margin: auto;
@@ -224,7 +224,7 @@ header {
 }
 
 .section-2 .box .info span{
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 900;
     text-align: center;
     color: var(--light-ft);
@@ -232,7 +232,7 @@ header {
 
 .section-2 .box .info span text{
     font-weight: 300;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 
@@ -243,7 +243,7 @@ header {
 
 .section-3 .title{
     font-weight: 900;
-    font-size: 100px;
+    font-size: 80px;
     padding: 50px;
 }
 
@@ -267,11 +267,11 @@ header {
 }
 
 .question-box h1{
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .question-box h2{
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 300;
 }
 
