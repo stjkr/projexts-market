@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+:root {
+    --dark-bg: #0f0f0f;
+    --light-bg: #fdfdfd;
+
+    --dark-ft: #010101;
+    --light-ft: #e2e2e2;
+
+}
+
+
+::selection {
+    background-color: rgba(50, 50, 50, 0.5);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.gradient {
+    background: hsla(208, 67%, 81%, 1);
+    background: linear-gradient(190deg, hsla(208, 67%, 81%, 1) 0%, hsla(37, 65%, 85%, 1) 50%, hsla(301, 65%, 83%, 1) 100%);
+    background: -moz-linear-gradient(190deg, hsla(208, 67%, 81%, 1) 0%, hsla(37, 65%, 85%, 1) 50%, hsla(301, 65%, 83%, 1) 100%);
+    background: -webkit-linear-gradient(190deg, hsla(208, 67%, 81%, 1) 0%, hsla(37, 65%, 85%, 1) 50%, hsla(301, 65%, 83%, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+
+
+
+html{
+    height: 100%;
+}
+
+body {
+    width: 70vw;
+    margin: auto;
+    background: var(--dark-bg);
+    /* background: linear-gradient(270deg, #111111 0%, #1d1d1d 50%, #0f0f0f 100%); */
+    font-family: "Inter", sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    /* background: white; */
+    position: relative;
+}
+
+/* header::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    height: 100px;
+    width: 100%;
+    left: 0;
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/23618/rip.svg") bottom;
+    background-size: 200%;
+} */
+
+
+.right-nav {
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 40%;
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+
+.left-nav {
+    float: left;
+    height: 100%;
+    width: 60%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.link {
+    font-size: 22px;
+    margin: auto;
+    transition: transform 0.75s;
+    padding: 12px 32px;
+    
+    background: #111111;
+    /* border: 1px solid black; */
+    color: var(--light-ft);
+}
+
+.link:hover {
+    transform: translateY(-7.5px);
+}
+
+.active{
+    background: #111111;
+    border: 1px solid #1d1d1d;
+    color: #a8a8a8;
+    border-radius: 10px;
+}
+
+.link a {
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.link a i {
+    display: inline;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.left-nav a img {
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid grey;
+}

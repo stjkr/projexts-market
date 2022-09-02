@@ -1,0 +1,119 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/market.css">
+    <link rel="stylesheet" href="./css/constants.css">
+    <link rel="shortcut icon" href="./img/bot.png" type="image/x-icon">
+    
+
+    <meta property="og:title" content="Projexts" />
+    <meta property="og:description" content="Browse. Build. Produce." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://i.imgur.com/w4xPNWM.png" />
+    <meta property="og:url" content="https://projexts.xyz" />
+    <meta property="og:site_name" content="Market" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@SolanaPixelBots" />
+    <meta name="twitter:title" content="Projexts" />
+    <meta name="twitter:description" content="Browse. Build. Produce." />
+    <meta name="twitter:image" content="https://i.imgur.com/w4xPNWM.png" />
+    <meta content="#ffffff" data-react-helmet="true" name="theme-color" />
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <title> Project Marketplace </title>
+</head>
+
+<body>
+    <header>
+        <nav class="left-nav">
+            <!-- <div class="link"> -->
+            <a href=""><img src="./img/bot.png"></a>
+            <!-- </div> -->
+        </nav>
+
+        <nav class="right-nav">
+            <div class="link"><a href="./index.html">HOME</a></div>
+            <div class="link active"><a href="">MARKET</a></div>
+            <div class="link"><a href="">BOTS</a></div>
+            <div class="link"><a href=""><i class='bx bxl-twitter'></i></a></div>
+            <div class="link"><a href=""><i class='bx bxl-discord-alt'></i></a></div>
+        </nav>
+    </header>
+    <main class="main-market">
+        <section class="entry-box">
+            <div class="entry-title">
+                <h1>Projexts <a class="gradient"> Market<i class='bx bx-store-alt'></i></a></h1>
+            </div>
+            <div class="entry-desc">
+                <h1> Browse through projects. Click to inspect the project. View the projects profile. <br>
+                    From there you can contact them or open a ticket in our server to start the process.<br><br>
+                    Additionally we have utilities listed for personal and community use.</h1>
+            </div>
+        </section>
+        <section class="market-box">
+            <div class="market-title">
+                <h1> Collections <a class="gradient" href="./browse.html?project"><i class='bx bx-collection'></i></a>
+                </h1>
+            </div>
+            <market id="project" class="display-box"></market>
+        </section>
+        <section class="market-box">
+            <div class="market-title">
+                <h1> Utilities <a class="gradient" href="./browse.html?utility"><i class='bx bx-extension'></i></a>
+                </h1>
+            </div>
+            <market id="utility" class="display-box"></market>
+        </section>
+        <section class="market-box">
+            <div class="market-title">
+                <h1> Artists <a class="gradient" href="./browse.html?artist"><i class='bx bxs-paint'></i></a></h1>
+            </div>
+            <market id="artist" class="display-box"></market>
+        </section>
+    </main>
+</body>
+
+</html>
+<script>
+    function loadPage(type) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onload = function (data) {
+            var collect = JSON.parse(this.responseText);
+            for (var i = collect.length - 1; i >= 0; i--) {
+                buildDOM(collect[i], type)
+            }
+        }
+        xhttp.open("GET", "https://api.projexts.xyz/collection/" + type, true);
+        xhttp.send();
+    }
+
+    function buildDOM(collect, type) {
+        var market = document.getElementById(type);
+        let div1 = document.createElement("a");
+        let img = document.createElement("img");
+        let div2 = document.createElement("div");
+        let div3 = document.createElement("div");
+        div1.classList.add("project-box");
+        div1.href = "./project.html?" + collect["symbol"];
+        img.src = collect['image'];
+        div2.classList.add("lower-box");
+        div3.classList.add("name");
+        div3.innerHTML = collect["name"];
+        div1.appendChild(img)
+        div2.appendChild(div3)
+        div1.appendChild(div2)
+        market.appendChild(div1)
+    }
+    function startLoad() {
+        var types = ["project", "utility", "artist"]
+        for (var i = 0; i < types.length; i++) {
+            console.log(types[i])
+            loadPage(types[i]);
+        }
+    }
+    startLoad()
+</script>
