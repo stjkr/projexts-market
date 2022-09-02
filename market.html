@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/market.css">
     <link rel="stylesheet" href="./css/constants.css">
     <link rel="shortcut icon" href="./img/bot.png" type="image/x-icon">
-    
+
 
     <meta property="og:title" content="Projexts" />
     <meta property="og:description" content="Browse. Build. Produce." />
@@ -31,7 +31,7 @@
     <header>
         <nav class="left-nav">
             <!-- <div class="link"> -->
-            <a href=""><img src="./img/bot.png"></a>
+            <a href="./index.html"><img class="logo-img" src="./img/bot.png"></a>
             <!-- </div> -->
         </nav>
 
@@ -39,10 +39,24 @@
             <div class="link"><a href="./index.html">HOME</a></div>
             <div class="link active"><a href="">MARKET</a></div>
             <div class="link"><a href="">BOTS</a></div>
-            <div class="link"><a href=""><i class='bx bxl-twitter'></i></a></div>
-            <div class="link"><a href=""><i class='bx bxl-discord-alt'></i></a></div>
+            <div class="link"><a href="https://twitter.com/SolanaPixelBots"><i class='bx bxl-twitter'></i></a></div>
+            <div class="link"><a href="https://discord.com/invite/uC9YmhTVHY"><i class='bx bxl-discord-alt'></i></a>
+            </div>
         </nav>
+        <div class="menu-open"><a onclick="openMenu()"><i class='bx bx-menu'></i></a></div>
     </header>
+    <menu class="menu">
+        <a onclick="closeMenu()" class="menu-close"><i class='bx bx-x'></i></a>
+        <div class="inner">
+            <div class="menu-link"><a href="./index.html">HOME</a></div>
+            <div class="menu-link menu-active"><a href="">MARKET</a></div>
+            <div class="menu-link"><a href="">BOTS</a></div>
+            <div class="menu-link"><a href="https://twitter.com/SolanaPixelBots"><i class='bx bxl-twitter'></i></a>
+            </div>
+            <div class="menu-link"><a href="https://discord.com/invite/uC9YmhTVHY"><i
+                        class='bx bxl-discord-alt'></i></a></div>
+        </div>
+    </menu>
     <main class="main-market">
         <section class="entry-box">
             <div class="entry-title">
@@ -116,4 +130,12 @@
         }
     }
     startLoad()
+</script>
+<script>
+
+    function closeMenu() {document.getElementsByClassName("menu")[0].style.visibility = "hidden";}
+    function openMenu() {document.getElementsByClassName("menu")[0].style.visibility = "visible";}
+
+
+
 </script>

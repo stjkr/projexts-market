@@ -30,7 +30,7 @@
     <header>
         <nav class="left-nav">
             <!-- <div class="link"> -->
-            <a href=""><img src="./img/bot.png"></a>
+            <a href=""><img class="logo-img" src="./img/bot.png"></a>
             <!-- </div> -->
         </nav>
 
@@ -42,10 +42,24 @@
             <div class="link active"><a href="">HOME</a></div>
             <div class="link"><a href="./market.html">MARKET</a></div>
             <div class="link"><a href="">BOTS</a></div>
-            <div class="link"><a href=""><i class='bx bxl-twitter'></i></a></div>
-            <div class="link"><a href=""><i class='bx bxl-discord-alt'></i></a></div>
+            <div class="link"><a href="https://twitter.com/SolanaPixelBots"><i class='bx bxl-twitter'></i></a></div>
+            <div class="link"><a href="https://discord.com/invite/uC9YmhTVHY"><i class='bx bxl-discord-alt'></i></a>
+            </div>
         </nav>
+        <div class="menu-open"><a onclick="openMenu()"><i class='bx bx-menu'></i></a></div>
     </header>
+    <menu class="menu">
+        <a onclick="closeMenu()" class="menu-close"><i class='bx bx-x'></i></a>
+        <div class="inner">
+            <div class="menu-link menu-active"><a href="">HOME</a></div>
+            <div class="menu-link"><a href="./market.html">MARKET</a></div>
+            <div class="menu-link"><a href="">BOTS</a></div>
+            <div class="menu-link"><a href="https://twitter.com/SolanaPixelBots"><i class='bx bxl-twitter'></i></a>
+            </div>
+            <div class="menu-link"><a href="https://discord.com/invite/uC9YmhTVHY"><i
+                        class='bx bxl-discord-alt'></i></a></div>
+        </div>
+    </menu>
     <section>
         <div class="intro-screen">
             <div class="intro-box">
@@ -168,7 +182,7 @@
 
         var characters = 'abcdefghijklmnopqrstu';
         let result = characters.charAt(Math.floor(Math.random() * 21));
-        bot.src = "./bots/" + result + ".png";        var pastel = "hsl(" + 360 * Math.random() + ',' +
+        bot.src = "./bots/" + result + ".png"; var pastel = "hsl(" + 360 * Math.random() + ',' +
             (25 + 70 * Math.random()) + '%,' +
             (85 + 10 * Math.random()) + '%)';
 
@@ -188,4 +202,9 @@
 
     colorLoop();
 
+</script>
+
+<script>
+    function closeMenu() { document.getElementsByClassName("menu")[0].style.visibility = "hidden"; }
+    function openMenu() { document.getElementsByClassName("menu")[0].style.visibility = "visible"; }
 </script>

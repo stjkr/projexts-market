@@ -38,9 +38,12 @@
 
 
 
-html{
-    height: 100%;
-}
+/* html{
+    height: 100%; */
+    /* width: 100vw;
+    padding: 0;
+    margin: 0;
+} */
 
 body {
     width: 70vw;
@@ -80,7 +83,7 @@ header {
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 40%;
+    width: 50%;
     padding: 20px;
     box-sizing: border-box;
 
@@ -89,7 +92,7 @@ header {
 .left-nav {
     float: left;
     height: 100%;
-    width: 60%;
+    width: 50%;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -128,8 +131,109 @@ header {
 
 }
 
-.left-nav a img {
+.logo-img{
     height: 100%;
     border-radius: 50%;
     border: 1px solid grey;
+}
+
+.menu{
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: (1, 1fr);
+    /* background: #0f0f0f; */
+    background: 
+    radial-gradient(
+     at bottom left, #101011, #0f0f0f
+    );
+
+    z-index: 100;
+}
+
+.menu .inner{
+    height: 50%;
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: grid;
+    grid-template-columns: (1, 1fr);
+}
+
+.menu-link{
+    color: var(--light-ft);
+    background: rgb(20, 20, 20);
+    font-size: 20px;
+    width: 100px;
+    font-weight: 900;
+    border-radius: 4px;
+    margin: 10px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    transition: border 2s;
+}
+
+.menu-link:hover{
+    cursor: pointer;
+    border: 1px solid #686868;
+}
+
+.menu-active{
+    background: transparent;
+    border: 1px solid #c0c0c0;
+    color: #c0c0c0;
+    border-radius: 4px;
+}
+
+.menu-close{
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: white;
+    cursor: pointer;
+    background: #1d1d1d;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: transform 1s, border 1s;
+}
+
+.menu-close:hover{
+    transform: scale(1.1);
+    border: 1px solid #c0c0c0;
+}
+
+.menu-open{
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: white;
+    cursor: pointer;
+    background: #1d1d1d;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    visibility: hidden;
+}
+
+@media screen and (max-width: 1000px) {
+    .link{
+        visibility: hidden;
+    }
+
+    .menu-open{
+        visibility: visible;
+    }
 }
