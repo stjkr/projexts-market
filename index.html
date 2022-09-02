@@ -28,27 +28,35 @@
 <body>
     <header>
         <nav class="left-nav">
-            <div class="link"><a href=""><img src="./img/bot.png"></a></div>
+            <!-- <div class="link"> -->
+            <a href=""><img src="./img/bot.png"></a>
+            <!-- </div> -->
         </nav>
 
         <nav class="right-nav">
-            <div class="link"><a href=""><i class='bx bx-home-smile'></i></a></div>
+            <!-- <div class="link"><a href=""><i class='bx bx-home-smile'></i></a></div>
             <div class="link"><a href=""><i class='bx bx-store'></i></a></div>
             <div class="link"><a href=""><i class='bx bx-bot'></i></a></div>
+            <div class="link"><a href=""><i class='bx bxl-twitter'></i></a></div> -->
+            <div class="link active"><a href="">HOME</a></div>
+            <div class="link"><a href="">MARKET</a></div>
+            <div class="link"><a href="">BOTS</a></div>
             <div class="link"><a href=""><i class='bx bxl-twitter'></i></a></div>
+            <div class="link"><a href=""><i class='bx bxl-discord-alt'></i></a></div>
         </nav>
     </header>
     <section>
         <div class="intro-screen">
             <div class="intro-box">
                 <div class="left-side">
-                    <h1 class="intro-text"><text class="changing-text gradient">Projexts.</text><br>A Marketplace for all
+                    <h1 class="intro-text" id="projexts-title"><text
+                            class="changing-text gradient">Projexts.</text><br>A Marketplace for all
                         Blockchain users.</h1>
                 </div>
             </div>
             <div class="intro-box">
                 <div class="right-side">
-                    <img src="./img/bot.png">
+                    <img id="bot-img" src="./img/bot.png" class="cursor">
                 </div>
 
             </div>
@@ -57,43 +65,45 @@
     <section>
         <div class="section-2">
             <div class="box">
-                <div class="info"><span>1<br><text>Browse through the projects and find the perfect one.</text></span></div>
+                <div class="info"><span>1<br><text>Browse through the projects and find the perfect one.</text></span>
+                </div>
                 <div class="info"><span>2<br><text>Inspect it, then contact the team via discord.</text></span></div>
                 <div class="info"><span>3<br><text>After our checks we take the payment in escrow.</text></span></div>
-                <div class="info"><span>4<br><text>Just like that, you receive all authorities and ownership.</text></span></div>
+                <div class="info"><span>4<br><text>Just like that, you receive all authorities and
+                            ownership.</text></span></div>
             </div>
         </div>
     </section>
     <section>
         <div class="section-3">
+            <text class="title gradient">Questions</text>
             <div class="box-grid">
                 <div class="question-box">
-                    <!-- <div class="question-logo"><i class='bx bx-planet'></i></div> -->
-                    
                     <h1> What are we creating? </h1>
                     <h2> A place for future founders to purchase an opportunity, a project and <a
-                            class="grad-text">run</a>
+                            class="gradient">run</a>
                         it from there.</h2>
                 </div>
                 <div class="question-box">
                     <h1> Why is this needed? </h1>
-                    <h2> If you have the <a class="grad-text">fire</a> to run a project but don't have the time to
+                    <h2> If you have the <a class="gradient">fire</a> to run a project but don't have the time to
                         build up the initial hype, then we can help you build out your ideas.</h2>
                 </div>
                 <div class="question-box">
                     <h1> Where can I look? </h1>
-                    <h2> Take a look through our <a class="grad-text">marketplace</a> and then contact us via discord.
+                    <h2> Take a look through our <a class="gradient">marketplace</a> and then contact us via discord.
                     </h2>
                 </div>
                 <div class="question-box">
                     <h1> How is mint distributed? </h1>
                     <h2>
-                        Depending on each <a class="grad-text">project</a> mints are conducted privately by the purchaser or split between old holders and pixel bots holders.
+                        Depending on each <a class="gradient">project</a> mints are conducted privately by the purchaser
+                        or split between old holders and pixel bots holders.
                     </h2>
                 </div>
                 <div class="question-box">
                     <h1> Who saves the projects? </h1>
-                    <h2> Our <a class="grad-text">team</a> retrieves all the authorities, images & metadata depending on
+                    <h2> Our <a class="gradient">team</a> retrieves all the authorities, images & metadata depending on
                         the type of project.
                     </h2>
                 </div>
@@ -131,4 +141,50 @@
     //         }
     //     });
     // }
+</script>
+<script>
+    const bot = document.getElementById("bot-img");
+    const backg = document.getElementById("projexts-title");
+    const build = document.getElementsByClassName("build-thingy")[0];
+
+    function createHex() {
+        var hexCode1 = "";
+        var hexValues1 = "0123456789abcdef";
+
+        for (var i = 0; i < 6; i++) {
+            hexCode1 += hexValues1.charAt(Math.floor(Math.random() * hexValues1.length));
+        }
+        return hexCode1;
+    }
+
+
+
+    function change() {
+
+        var random = Math.floor(Math.random() * 4000);
+
+        var bot = document.getElementById("bot-img");
+
+        var characters = 'abcdefghijklmnopqrstu';
+        let result = characters.charAt(Math.floor(Math.random() * 21));
+        bot.src = "./bots/" + result + ".png";        var pastel = "hsl(" + 360 * Math.random() + ',' +
+            (25 + 70 * Math.random()) + '%,' +
+            (85 + 10 * Math.random()) + '%)';
+
+        backg.style.color = pastel;
+    }
+
+
+
+
+    var colorLoop = function () {
+        setTimeout(function () {
+            change()
+            colorLoop();
+        }, 5000);
+
+    }
+
+    colorLoop();
+
 </script>

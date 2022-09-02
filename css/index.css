@@ -22,6 +22,10 @@
     background-color: rgba(255, 255, 255, 0.4);
 }
 
+/*  */
+/* REUSABLE STUFF */
+/*  */
+
 .gradient {
     background: hsla(208, 67%, 81%, 1);
     background: linear-gradient(190deg, hsla(208, 67%, 81%, 1) 0%, hsla(37, 65%, 85%, 1) 50%, hsla(301, 65%, 83%, 1) 100%);
@@ -31,12 +35,22 @@
     -webkit-text-fill-color: transparent;
 }
 
+.cursor{
+    cursor: pointer;
+}
+
+
+/*  */
+/* MAIN */
+/*  */
+
+
 html{
     height: 100%;
 }
 
 body {
-    width: 80vw;
+    width: 70vw;
     /* height: 100%; */
     margin: auto;
     background: var(--dark-bg);
@@ -52,20 +66,20 @@ a{
 header {
     width: 100%;
     height: 100px;
-    background: white;
+    /* background: white; */
     position: relative;
 }
 
-header::after {
+/* header::after {
     content: "";
     position: absolute;
     top: 100%;
-    height: 80px;
+    height: 100px;
     width: 100%;
     left: 0;
     background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/23618/rip.svg") bottom;
     background-size: 200%;
-}
+} */
 
 
 .right-nav {
@@ -92,16 +106,26 @@ header::after {
     font-size: 24px;
     margin: auto;
     transition: transform 0.75s;
+    padding: 12px 32px;
+    border-radius: 10px;
+    background: #111111;
+    border: 1px solid black;
+    color: var(--light-ft);
 }
 
 .link:hover {
     transform: translateY(-7.5px);
 }
 
-.link a {
-    color: var(--dark-ft);
-    text-decoration: none;
+.active{
+    background: #111111;
+    border: 1px solid #1d1d1d;
+    color: #a8a8a8;
+}
 
+.link a {
+    text-decoration: none;
+    font-weight: 900;
 }
 
 .link a i {
@@ -111,7 +135,7 @@ header::after {
 
 }
 
-.link a img {
+.left-nav a img {
     height: 100%;
     border-radius: 50%;
     border: 1px solid grey;
@@ -163,13 +187,12 @@ header::after {
 }
 
 .right-side img {
-    border-radius: 30%;
+    border-radius: 50%;
 }
 
 .section-2{
     width: 100%;
     height: 40%;
-    
 }
 
 .section-2 .box{
@@ -180,11 +203,16 @@ header::after {
     margin: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    border: 1px solid #1d1d1d;
+    border: 2px solid #1d1d1d;
+    transition: border 1s;
     /* background: linear-gradient(90deg, hsla(195, 86%, 50%, 1) 0%, hsla(236, 93%, 65%, 1) 100%); */
     /* background: linear-gradient(90deg, hsla(225, 40%, 54%, 1) 0%, hsla(284, 75%, 54%, 1) 100%); */
     /* background: linear-gradient(90deg, hsla(248, 21%, 15%, 1) 0%, hsla(250, 14%, 61%, 1) 100%); */
     background: #111111;
+}
+
+.section-2 .box:hover{
+    border: 2px solid #707070; 
 }
 
 .section-2 .box .info{
@@ -196,7 +224,7 @@ header::after {
 }
 
 .section-2 .box .info span{
-    font-size: 30px;
+    font-size: 50px;
     font-weight: 900;
     text-align: center;
     color: var(--light-ft);
@@ -204,13 +232,19 @@ header::after {
 
 .section-2 .box .info span text{
     font-weight: 300;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 
 .section-3{
     width: 100%;
     height: 80%;
+}
+
+.section-3 .title{
+    font-weight: 900;
+    font-size: 100px;
+    padding: 50px;
 }
 
 
@@ -223,12 +257,22 @@ header::after {
     color: white;
     border-radius: 50px;
     border: 2px solid #1d1d1d;
+    transition: border 1s;
     /* opacity: 0; */
     /* transition: visibility 1s linear 1000ms, opacity 1000ms; */
 }
 
+.question-box:hover{
+    border: 2px solid #707070; 
+}
+
 .question-box h1{
     font-size: 40px;
+}
+
+.question-box h2{
+    font-size: 30px;
+    font-weight: 300;
 }
 
 .show{
@@ -237,6 +281,7 @@ header::after {
 }
 
 .box-grid {
+    margin: 30px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 1fr;
