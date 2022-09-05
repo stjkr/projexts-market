@@ -62,19 +62,14 @@
     </menu>
     <section>
         <div class="intro-screen">
-            <div class="intro-box">
                 <div class="left-side">
                     <h1 class="intro-text" id="projexts-title"><text
                             class="changing-text gradient">Projexts.</text><br>A Marketplace for all
                         Blockchain users.</h1>
                 </div>
-            </div>
-            <div class="intro-box">
                 <div class="right-side">
                     <img id="bot-img" src="./img/bot.png" class="cursor">
                 </div>
-
-            </div>
         </div>
     </section>
     <section>
@@ -205,6 +200,6 @@
 </script>
 
 <script>
-    function closeMenu() { document.getElementsByClassName("menu")[0].style.visibility = "hidden"; }
-    function openMenu() { document.getElementsByClassName("menu")[0].style.visibility = "visible"; }
+    function closeMenu() { document.getElementsByClassName("menu")[0].style.display = "none";document.getElementsByClassName("menu")[0].style.visibility = "hidden"; }
+    function openMenu() { document.getElementsByClassName("menu")[0].style.display = "block"; document.getElementsByClassName("menu")[0].style.visibility = "visible";}
 </script>

@@ -35,20 +35,15 @@
     cursor: pointer;
 }
 
-
-
-
-/* html{
-    height: 100%; */
-    /* width: 100vw;
-    padding: 0;
+html{
     margin: 0;
-} */
+    padding: 0;
+}
 
 body {
-    width: 70vw;
-    margin: auto;
+    width: 80%;
     background: var(--dark-bg);
+    margin: auto;
     /* background: linear-gradient(270deg, #111111 0%, #1d1d1d 50%, #0f0f0f 100%); */
     font-family: "Inter", sans-serif;
 }
@@ -141,6 +136,7 @@ header {
     height: 100%;
     width: 100%;
     visibility: hidden;
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -148,7 +144,6 @@ header {
     padding: 0;
     display: grid;
     grid-template-columns: (1, 1fr);
-    /* background: #0f0f0f; */
     background: 
     radial-gradient(
      at bottom left, #101011, #0f0f0f

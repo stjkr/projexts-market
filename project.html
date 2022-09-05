@@ -57,8 +57,7 @@
                         class='bx bxl-discord-alt'></i></a></div>
         </div>
     </menu>
-    <section class="main-area project-area">
-
+    <section>
         <div class="project-profile">
         </div>
         <div class="slideshow">
@@ -68,7 +67,6 @@
 
 </html>
 
-<script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
 <script>
     function loadSlideshow() {
         const xhttp = new XMLHttpRequest();
@@ -76,12 +74,14 @@
             var collect = JSON.parse(this.responseText);
             var profile = document.getElementsByClassName("slideshow")[0];
             var images = collect["images"];
-            for (i = 0; i < images.length; i++) {
-                let img = document.createElement("img");
-                img.classList.add("slide");
-                img.src = images[i];
-                profile.appendChild(img);
-            }
+            try {
+                for (i = 0; i < images.length; i++) {
+                    let img = document.createElement("img");
+                    img.classList.add("slide");
+                    img.src = images[i];
+                    profile.appendChild(img);
+                }
+            } catch { }
 
 
 
@@ -105,9 +105,9 @@
         }
         myIndex++;
         if (myIndex > x.length) { myIndex = 1 }
-        try{
-        x[myIndex - 1].style.display = "block";
-        } catch{}
+        try {
+            x[myIndex - 1].style.display = "block";
+        } catch { }
         setTimeout(carousel, 5000);
     }
 </script>
@@ -119,11 +119,12 @@
             var profile = document.getElementsByClassName("project-profile")[0];
 
             let img = document.createElement("img");
-            img.classList.add("box", "image");
+            img.classList.add("image-right");
             img.src = collect["image"];
 
             let div1 = document.createElement("div");
             div1.classList.add("box", "socials");
+            div1.appendChild(img)
 
             let h1 = document.createElement("p");
             h1.innerHTML = collect["name"];
@@ -162,16 +163,20 @@
                 div1.appendChild(a3);
             }
 
-
+            // let info = document.createElement("p");
+            // info.innerHTML = "Info";
 
             let div2 = document.createElement("div");
             div2.classList.add("box", "info")
+            // div2.appendChild(info);
             div2.innerHTML = collect["desc"]
+
+
 
             div1.appendChild(h1)
             div1.appendChild(label)
 
-            profile.appendChild(img)
+            // profile.appendChild(img)
             profile.appendChild(div1)
             profile.appendChild(div2)
 

@@ -11,6 +11,7 @@
 
 html, body{
     font-family: 'Inter', sans-serif;
+    width: 100%;
 }
 
 a{
@@ -156,9 +157,10 @@ a{
     background: rgb(20, 20, 20);
     box-shadow: 0px 3px 10px rgb(0 0 0 / 0.2);
     border-radius: 10px;
-    margin: auto;
+    margin: 20px auto;
     display: grid;
-    grid-template: 'a b b b''c c c c';
+    /* grid-template: 'a b b b''c c c c'; */
+    grid-template: 'b''c';
 }
 
 
@@ -176,11 +178,20 @@ a{
     grid-area: a;
     margin: auto;
     border: none;
-    max-height: 250px;
+    background: transparent;
+    
+}
+
+.image-right{
+    display: inline;
+    float: right;
+    border-radius: 10px;
+    max-height: 150px;
 }
 
 .project-profile .socials {
     grid-area: b;
+    min-height: 200px;
     padding: 25px;
     box-sizing: border-box;
     text-align: left;
@@ -199,8 +210,12 @@ a{
     margin-right: 30px;
 }
 
+.project-profile .socials a i{
+    transition: transform 1s;
+}
+
 .project-profile .socials a i:hover {
-    transform: translate(1.5);
+    transform: scale(1.1);
 }
 
 .project-profile .socials .asking-price {
@@ -211,19 +226,13 @@ a{
 .project-profile .info {
     grid-area: c;
     padding: 25px;
+    line-height: 25px;
     color: white;
-}
-
-
-@media screen and (max-width: 800px) {
-    .project-profile {
-        grid-template: 'a''b''c';
-    }
 }
 
 .slideshow{
     width: 80%;
-    height: 400px;
+    max-height: 400px;
     background: rgb(20, 20, 20);
     box-shadow: 0px 3px 10px rgb(0 0 0 / 0.2);
     border: 1px solid rgb(0 0 0 / 0.2);
@@ -239,4 +248,13 @@ a{
     display: none;
     width: 100%;
     height: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+    .slideshow{
+        width: 100%;
+    }
+    .project-profile {
+        width: 100%;
+    }
 }
