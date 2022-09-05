@@ -93,13 +93,12 @@ header {
 }
 
 .link {
-    font-size: 22px;
+    font-size: 16px;
     margin: auto;
     transition: transform 0.75s;
     padding: 12px 32px;
     
     background: #111111;
-    /* border: 1px solid black; */
     color: var(--light-ft);
 }
 
