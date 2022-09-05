@@ -137,25 +137,25 @@
 
 </html>
 <script>
-    // const boxes = document.querySelectorAll(".question-box");
+    const boxes = document.querySelectorAll(".question-box");
 
-    // window.addEventListener("scroll", checkBoxes);
+    window.addEventListener("scroll", checkBoxes);
 
-    // checkBoxes();
+    checkBoxes();
 
-    // function checkBoxes() {
-    //     const triggerBottom = (window.innerHeight / 4) * 4;
+    function checkBoxes() {
+        const triggerBottom = (window.innerHeight / 4) * 4;
 
-    //     boxes.forEach((box) => {
-    //         const boxTop = box.getBoundingClientRect().top;
+        boxes.forEach((box) => {
+            const boxTop = box.getBoundingClientRect().top;
 
-    //         if (boxTop < triggerBottom) {
-    //             box.classList.add("show");
-    //         } else {
-    //             box.classList.remove("show");
-    //         }
-    //     });
-    // }
+            if (boxTop < triggerBottom) {
+                box.classList.add("show");
+            } else {
+                box.classList.remove("show");
+            }
+        });
+    }
 </script>
 <script>
     const bot = document.getElementById("bot-img");
