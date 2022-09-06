@@ -107,6 +107,7 @@ header {
 }
 
 .active{
+    font-size: 18px;
     background: #111111;
     border: 1px solid #1d1d1d;
     color: #a8a8a8;
