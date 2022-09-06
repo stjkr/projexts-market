@@ -145,6 +145,15 @@ a{
     font-size: 30px;
 }
 
+.market-link{
+    transition: transform 1s;
+    color: hsla(208, 67%, 81%, 1);
+}
+
+.market-link:hover{
+    transform: scale(1.2);
+}
+
 
 
 
