@@ -24,9 +24,12 @@
 
 .gradient {
     background: hsla(208, 67%, 81%, 1);
-    background: linear-gradient(190deg, hsla(208, 67%, 81%, 1) 0%, hsla(37, 65%, 85%, 1) 50%, hsla(301, 65%, 83%, 1) 100%);
+    background: linear-gradient(90deg, #5179f2 0%, #5338e5 25%, #7d33de 50%, #ce5dcf 75%, #d2abb0 100%);
+
+    /* background: linear-gradient(190deg, hsla(208, 67%, 81%, 1) 0%, hsla(37, 65%, 85%, 1) 50%, hsla(301, 65%, 83%, 1) 100%);
+
     background: -moz-linear-gradient(190deg, hsla(208, 67%, 81%, 1) 0%, hsla(37, 65%, 85%, 1) 50%, hsla(301, 65%, 83%, 1) 100%);
-    background: -webkit-linear-gradient(190deg, hsla(208, 67%, 81%, 1) 0%, hsla(37, 65%, 85%, 1) 50%, hsla(301, 65%, 83%, 1) 100%);
+    background: -webkit-linear-gradient(190deg, hsla(208, 67%, 81%, 1) 0%, hsla(37, 65%, 85%, 1) 50%, hsla(301, 65%, 83%, 1) 100%); */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
