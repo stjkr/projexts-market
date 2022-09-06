@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/market.css">
     <link rel="stylesheet" href="./css/constants.css">
     <link rel="shortcut icon" href="./img/bot.png" type="image/x-icon">
+
 
     <meta property="og:title" content="Projexts" />
     <!-- <meta property="og:description" content="Browse. Build. Produce." /> -->
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://i.imgur.com/2cew8H4.png" />
     <meta property="og:url" content="https://projexts.xyz" />
-    <meta property="og:site_name" content="Home" />
+    <meta property="og:site_name" content="Market" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@SolanaPixelBots" />
     <meta name="twitter:title" content="Projexts" />
@@ -29,16 +30,13 @@
 <body>
     <header>
         <nav class="left-nav">
-            <!-- <div class="link"> -->
-            <a href=""><img class="logo-img" src="./img/bot.png"></a>
+            <a href="./index.html"><img class="logo-img" src="./img/bot.png"></a>
             <!-- </div> -->
         </nav>
 
         <nav class="right-nav">
-
-            <a href=""><div class="link active">HOME</div></a>
-            <a href="./market.html"><div class="link">MARKET</div></a>
-            <a href=""><div class="link">BOTS</div>
+            <a href="https://www.projexts.xyz/"><div class="link">HOME</div></a>
+            <a href="https://market.projexts.xyz/"><div class="link active">MARKET</div></a>
             <a href="https://twitter.com/SolanaPixelBots"><div class="link"><i class='bx bxl-twitter'></i></div></a>
             <a href="https://discord.com/invite/uC9YmhTVHY"><div class="link"><i class='bx bxl-discord-alt'></i></div></a>  
             
@@ -48,155 +46,95 @@
     <menu class="menu">
         <a onclick="closeMenu()" class="menu-close"><i class='bx bx-x'></i></a>
         <div class="inner">
-            <div class="menu-link menu-active"><a href="">HOME</a></div>
-            <div class="menu-link"><a href="./market.html">MARKET</a></div>
-            <div class="menu-link"><a href="">BOTS</a></div>
+            <div class="menu-link"><a href="https://www.projexts.xyz/">HOME</a></div>
+            <div class="menu-link menu-active"><a href="https://market.projexts.xyz/">MARKET</a></div>
             <div class="menu-link"><a href="https://twitter.com/SolanaPixelBots"><i class='bx bxl-twitter'></i></a>
             </div>
             <div class="menu-link"><a href="https://discord.com/invite/uC9YmhTVHY"><i
                         class='bx bxl-discord-alt'></i></a></div>
         </div>
     </menu>
-    <section>
-        <div class="intro-screen">
-                <div class="left-side">
-                    <h1 class="intro-text" id="projexts-title"><text
-                            class="changing-text gradient">Projexts.</text><br>A Marketplace for all
-                        Blockchain users.</h1>
-                </div>
-                <div class="right-side">
-                    <img id="bot-img" src="./img/bot.png" class="cursor">
-                </div>
-        </div>
-    </section>
-    <section>
-        <div class="section-2">
-            <div class="box">
-                <div class="info"><span>1<br><text>Browse through the projects and find the perfect one.</text></span>
-                </div>
-                <div class="info"><span>2<br><text>Inspect it, then contact the team via discord.</text></span></div>
-                <div class="info"><span>3<br><text>After our checks we take the payment in escrow.</text></span></div>
-                <div class="info"><span>4<br><text>Just like that, you receive all authorities and
-                            ownership.</text></span></div>
+    <main class="main-market">
+        <section class="entry-box">
+            <div class="entry-title">
+                <h1>Projexts <a class="gradient"> Market<i class='bx bx-store-alt'></i></a></h1>
             </div>
-        </div>
-    </section>
-    <section>
-        <div class="section-3">
-            <text class="title gradient">Questions</text>
-            <div class="box-grid">
-                <div class="question-box">
-                    <h1> What are we creating? </h1>
-                    <h2> A place for future founders to purchase an opportunity, a project and <a
-                            class="gradient">run</a>
-                        it from there.</h2>
-                </div>
-                <div class="question-box">
-                    <h1> Why is this needed? </h1>
-                    <h2> If you have the <a class="gradient">fire</a> to run a project but don't have the time to
-                        build up the initial hype, then we can help you build out your ideas.</h2>
-                </div>
-                <div class="question-box">
-                    <h1> Where can I look? </h1>
-                    <h2> Take a look through our <a class="gradient">marketplace</a> and then contact us via discord.
-                    </h2>
-                </div>
-                <div class="question-box">
-                    <h1> How is mint distributed? </h1>
-                    <h2>
-                        Depending on each <a class="gradient">project</a> mints are conducted privately by the purchaser
-                        or split between old holders and pixel bots holders.
-                    </h2>
-                </div>
-                <div class="question-box">
-                    <h1> Who saves the projects? </h1>
-                    <h2> Our <a class="gradient">team</a> retrieves all the authorities, images & metadata depending on
-                        the type of project.
-                    </h2>
-                </div>
-                <div class="question-box">
-                    <h1> When will the market open? </h1>
-                    <h2> <a href="./coming-soon.html"> Coming Soon.</a>
-                    </h2>
-                </div>
+            <div class="entry-desc">
+                <h1> Browse through projects. Click to inspect the project. View the projects profile. <br>
+                    From there you can contact them or open a ticket in our server to start the process.<br><br>
+                    Additionally we have utilities listed for personal and community use.</h1>
             </div>
-
-        </div>
-    </section>
-
-
+        </section>
+        <section class="market-box">
+            <div class="market-title">
+                <h1> Collections <a class="gradient" href="./browse.html?project"><i class='bx bx-collection'></i></a>
+                </h1>
+            </div>
+            <market id="project" class="display-box"></market>
+        </section>
+        <section class="market-box">
+            <div class="market-title">
+                <h1> Utilities <a class="gradient" href="./browse.html?utility"><i class='bx bx-extension'></i></a>
+                </h1>
+            </div>
+            <market id="utility" class="display-box"></market>
+        </section>
+        <section class="market-box">
+            <div class="market-title">
+                <h1> Artists <a class="gradient" href="./browse.html?artist"><i class='bx bxs-paint'></i></a></h1>
+            </div>
+            <market id="artist" class="display-box"></market>
+        </section>
+    </main>
 </body>
 
 </html>
 <script>
-    const boxes = document.querySelectorAll(".question-box");
-
-    window.addEventListener("scroll", checkBoxes);
-
-    checkBoxes();
-
-    function checkBoxes() {
-        const triggerBottom = (window.innerHeight / 4) * 4;
-
-        boxes.forEach((box) => {
-            const boxTop = box.getBoundingClientRect().top;
-
-            if (boxTop < triggerBottom) {
-                box.classList.add("show");
-            } else {
-                box.classList.remove("show");
+    function loadPage(type) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onload = function (data) {
+            var response = JSON.parse(this.responseText);
+            var collect = response.reverse();
+            var i = 0;
+            for (i < collect.length; i < 4; i++) {
+                buildDOM(collect[i], type)
             }
-        });
-    }
-</script>
-<script>
-    const bot = document.getElementById("bot-img");
-    const backg = document.getElementById("projexts-title");
-    const build = document.getElementsByClassName("build-thingy")[0];
-
-    function createHex() {
-        var hexCode1 = "";
-        var hexValues1 = "0123456789abcdef";
-
-        for (var i = 0; i < 6; i++) {
-            hexCode1 += hexValues1.charAt(Math.floor(Math.random() * hexValues1.length));
         }
-        return hexCode1;
+        xhttp.open("GET", "https://api.projexts.xyz/collection/" + type, true);
+        xhttp.send();
     }
 
-
-
-    function change() {
-
-        var random = Math.floor(Math.random() * 4000);
-
-        var bot = document.getElementById("bot-img");
-
-        var characters = 'abcdefghijklmnopqrstu';
-        let result = characters.charAt(Math.floor(Math.random() * 21));
-        bot.src = "./bots/" + result + ".png"; var pastel = "hsl(" + 360 * Math.random() + ',' +
-            (25 + 70 * Math.random()) + '%,' +
-            (85 + 10 * Math.random()) + '%)';
-
-        backg.style.color = pastel;
+    function buildDOM(collect, type) {
+        var market = document.getElementById(type);
+        let div1 = document.createElement("a");
+        let img = document.createElement("img");
+        let div2 = document.createElement("div");
+        let div3 = document.createElement("div");
+        div1.classList.add("project-box");
+        div1.href = "./project.html?" + collect["symbol"];
+        img.src = collect['image'];
+        div2.classList.add("lower-box");
+        div3.classList.add("name");
+        div3.innerHTML = collect["name"];
+        div1.appendChild(img)
+        div2.appendChild(div3)
+        div1.appendChild(div2)
+        market.appendChild(div1)
     }
-
-
-
-
-    var colorLoop = function () {
-        setTimeout(function () {
-            change()
-            colorLoop();
-        }, 5000);
-
+    function startLoad() {
+        var types = ["project", "utility", "artist"]
+        for (var i = 0; i < types.length; i++) {
+            console.log(types[i])
+            loadPage(types[i]);
+        }
     }
-
-    colorLoop();
-
+    startLoad()
 </script>
-
 <script>
-    function closeMenu() { document.getElementsByClassName("menu")[0].style.display = "none";document.getElementsByClassName("menu")[0].style.visibility = "hidden"; }
-    function openMenu() { document.getElementsByClassName("menu")[0].style.display = "block"; document.getElementsByClassName("menu")[0].style.visibility = "visible";}
+
+    function closeMenu() {document.getElementsByClassName("menu")[0].style.visibility = "hidden";}
+    function openMenu() {document.getElementsByClassName("menu")[0].style.visibility = "visible";}
+
+
+
 </script>

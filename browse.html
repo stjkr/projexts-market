@@ -5,9 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/market.css">
+    <link rel="stylesheet" href="./css/constants.css">
 
     <link rel="shortcut icon" href="./img/color.png" type="image/x-icon">
     <meta property="og:title" content="Projexts" />
@@ -28,32 +27,36 @@
 </head>
 
 <body>
-    <div class="container" id="navbar">
-        <nav class="nav">
-            <ul>
-                <li>
-                    <a href="./index.html" class="nav_link">
-                        <i class='bx bx-home-alt' class="nav_icon"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="./coming-soon.html" class="nav_link active">
-                        <i class='bx bx-planet' class="nav_icon"></i>
-
-                    </a>
-                </li>
-                <li>
-                    <a href="./info.html" class="nav_link">
-                        <i class='bx bx-color' class="nav_icon"></i>
-                    </a>
-                </li>
-            </ul>
+    <header>
+        <nav class="left-nav">
+            <a href="./index.html"><img class="logo-img" src="./img/bot.png"></a>
+            <!-- </div> -->
         </nav>
-    </div>
+
+        <nav class="right-nav">
+            <a href="https://www.projexts.xyz/"><div class="link">HOME</div></a>
+            <a href="https://market.projexts.xyz/"><div class="link active">MARKET</div></a>
+            <a href="https://twitter.com/SolanaPixelBots"><div class="link"><i class='bx bxl-twitter'></i></div></a>
+            <a href="https://discord.com/invite/uC9YmhTVHY"><div class="link"><i class='bx bxl-discord-alt'></i></div></a>  
+            
+        </nav>
+        <div class="menu-open"><a onclick="openMenu()"><i class='bx bx-menu'></i></a></div>
+    </header>
+    <menu class="menu">
+        <a onclick="closeMenu()" class="menu-close"><i class='bx bx-x'></i></a>
+        <div class="inner">
+            <div class="menu-link"><a href="https://www.projexts.xyz/">HOME</a></div>
+            <div class="menu-link menu-active"><a href="https://market.projexts.xyz/">MARKET</a></div>
+            <div class="menu-link"><a href="https://twitter.com/SolanaPixelBots"><i class='bx bxl-twitter'></i></a>
+            </div>
+            <div class="menu-link"><a href="https://discord.com/invite/uC9YmhTVHY"><i
+                        class='bx bxl-discord-alt'></i></a></div>
+        </div>
+    </menu>
     <main class="main-market">
         <section class="entry-box">
             <div class="entry-title">
-                <h1>Projext <a class="grad-text"> Market<i class='bx bx-store-alt'></i></a></h1>
+                <h1>Projext <a class="gradient"> Market<i class='bx bx-store-alt'></i></a></h1>
             </div>
             <div class="entry-desc">
                 <h1> Browse through projects. Click to inspect the project. View the projects profile. <br>
