@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/constants.css">
     <link rel="shortcut icon" href="./img/bot.png" type="image/x-icon">
@@ -27,108 +28,129 @@
 </head>
 
 <body>
-    <header>
-        <nav class="left-nav">
-            <!-- <div class="link"> -->
-            <a href=""><img class="logo-img" src="./img/bot.png"></a>
-            <!-- </div> -->
-        </nav>
 
-        <nav class="right-nav">
+    <nav>
+        <a href="https://www.projexts.xyz/">
+            <div class="link"><i class='bx bx-home'></i></div>
+        </a>
+        <a href="https://market.projexts.xyz/">
+            <div class="link active"><i class='bx bx-store'></i></div>
+        </a>
+        <a href="https://twitter.com/SolanaPixelBots">
+            <div class="link"><i class='bx bxl-twitter'></i></div>
+        </a>
+        <a href="https://discord.com/invite/uC9YmhTVHY">
+            <div class="link"><i class='bx bxl-discord-alt'></i></div>
+        </a>
+    </nav>
 
-            <a href=""><div class="link active">HOME</div></a>
-            <a href="./market.html"><div class="link">MARKET</div></a>
-            <a href=""><div class="link">BOTS</div>
-            <a href="https://twitter.com/SolanaPixelBots"><div class="link"><i class='bx bxl-twitter'></i></div></a>
-            <a href="https://discord.com/invite/uC9YmhTVHY"><div class="link"><i class='bx bxl-discord-alt'></i></div></a>  
-            
-        </nav>
-        <div class="menu-open"><a onclick="openMenu()"><i class='bx bx-menu'></i></a></div>
-    </header>
+    <div class="menu-open"><a onclick="openMenu()"><i class='bx bx-menu'></i></a></div>
+
     <menu class="menu">
         <a onclick="closeMenu()" class="menu-close"><i class='bx bx-x'></i></a>
         <div class="inner">
-            <div class="menu-link menu-active"><a href="">HOME</a></div>
-            <div class="menu-link"><a href="./market.html">MARKET</a></div>
-            <div class="menu-link"><a href="">BOTS</a></div>
+            <div class="menu-link"><a href="https://www.projexts.xyz/"><i class='bx bx-home'></i></a></div>
+            <div class="menu-link menu-active"><a href="https://market.projexts.xyz/"><i class='bx bx-store'></i></a>
+            </div>
             <div class="menu-link"><a href="https://twitter.com/SolanaPixelBots"><i class='bx bxl-twitter'></i></a>
             </div>
             <div class="menu-link"><a href="https://discord.com/invite/uC9YmhTVHY"><i
                         class='bx bxl-discord-alt'></i></a></div>
         </div>
     </menu>
-    <section>
-        <div class="intro-screen">
-                <div class="left-side">
-                    <h1 class="intro-text" id="projexts-title"><text
-                            class="changing-text gradient">Projexts.</text><br>A Marketplace for all
-                        Blockchain users.</h1>
-                </div>
-                <div class="right-side">
-                    <img id="bot-img" src="./img/bot.png" class="cursor">
-                </div>
+    <section class="intro-screen">
+        <div class="left-side">
+            <h1>
+                <text class="gradient title">Projexts.</text>
+                <br>
+                <text class="text">The only <text id="projexts-title">marketplace</text> to buy and sell entire NFT
+                    projects.</text>
+            </h1>
         </div>
-    </section>
-    <section>
-        <div class="section-2">
-            <div class="box">
-                <div class="info"><span>1<br><text>Browse through the projects and find the perfect one.</text></span>
-                </div>
-                <div class="info"><span>2<br><text>Inspect it, then contact the team via discord.</text></span></div>
-                <div class="info"><span>3<br><text>After our checks we take the payment in escrow.</text></span></div>
-                <div class="info"><span>4<br><text>Just like that, you receive all authorities and
-                            ownership.</text></span></div>
+        <div class="right-side">
+            <div class="right-inner">
+                <img class="bot-img" src="./img/bot.png">
+                <img class="bot-img" src="./img/bot.png">
+                <img class="bot-img" src="./img/bot.png">
+                <img class="bot-img" src="./img/bot.png">
             </div>
+
         </div>
     </section>
-    <section>
-        <div class="section-3">
+    <section class="section-2">
+        <div class="box">
+            <div class="info"><span><text>Purchase an existing NFT project and all its assets.</text></span>
+            </div>
+            <div class="info"><span><text>Have our experienced team develop a custom project to your
+                        liking.</text></span></div>
+            <div class="info"><span><text>Browse useful services for your new or existing NFT project.</text></span>
+            </div>
+            <div class="info"><span><text>Sell your minted or unminted project to a new owner.</text></span></div>
+        </div>
+    </section>
+    <section class="section-3">
+        <div class="section-title">
             <text class="title gradient">Questions</text>
-            <div class="box-grid">
-                <div class="question-box">
-                    <h1> What are we creating? </h1>
-                    <h2> A place for future founders to purchase an opportunity, a project and <a
-                            class="gradient">run</a>
-                        it from there.</h2>
-                </div>
-                <div class="question-box">
-                    <h1> Why is this needed? </h1>
-                    <h2> If you have the <a class="gradient">fire</a> to run a project but don't have the time to
-                        build up the initial hype, then we can help you build out your ideas.</h2>
-                </div>
-                <div class="question-box">
-                    <h1> Where can I look? </h1>
-                    <h2> Take a look through our <a class="gradient">marketplace</a> and then contact us via discord.
-                    </h2>
-                </div>
-                <div class="question-box">
-                    <h1> How is mint distributed? </h1>
-                    <h2>
-                        Depending on each <a class="gradient">project</a> mints are conducted privately by the purchaser
-                        or split between old holders and pixel bots holders.
-                    </h2>
-                </div>
-                <div class="question-box">
-                    <h1> Who saves the projects? </h1>
-                    <h2> Our <a class="gradient">team</a> retrieves all the authorities, images & metadata depending on
-                        the type of project.
-                    </h2>
-                </div>
-                <div class="question-box">
-                    <h1> When will the market open? </h1>
-                    <h2> <a href="./coming-soon.html"> Coming Soon.</a>
-                    </h2>
-                </div>
-            </div>
+        </div>
 
+        <div class="box-grid">
+            <div class="question-box">
+                <h1> Why buy an already minted NFT project? </h1>
+                <h2> Community- In the NFT space, a community is one of your most important utilities. By purchasing
+                    an existing project, you can adopt an entire community to merge with your organization! They
+                    will thank you for giving new hope to their investments
+                    Time- It takes tremendous amounts of time and effort to create a project from scratch when you
+                    are not sure where to start. The hassle you save yourself from is by far worth the cost if you
+                    can afford this venture.</h2>
+            </div>
+            <div class="question-box">
+                <h1> Why sell your project? </h1>
+                <h2> Build to sell- If you know what you are doing, you can build a project to sell to a new
+                    business.
+                    Don’t rug, sell - Many people decide that running a project is too much work after they have
+                    already created one. After they have earned some quick cash, they throw away copious value and
+                    abandon the investors. We call this “rugging.” Why not sell the project to a new business?</h2>
+            </div>
+            <div class="question-box">
+                <h1> How do I know I won’t be scammed? </h1>
+                <h2> Here is the deal- We can connect buyers and sellers for free. But, you must transact at your
+                    own risk. However, you can contract us as middlemen to ensure no party is wronged! For this we
+                    take a small fee, but we handle transferring authorities of the assets.</h2>
+            </div>
+            <div class="question-box">
+                <h1> What else can I find here? </h1>
+                <h2>
+                    Here you can find- An artist or a developer to hire. Bots to add to your Discord and Twitter.
+                    Unique marketing services to find new audience. There is much more, go take a look!
+
+                </h2>
+            </div>
+            <div class="question-box">
+                <h1> What is our NFT? </h1>
+                <h2> Pixel Bots is our NFT collection on Solana. Owning a Pixel Bot allows you to earn $PXLB.
+                    This token can be used for raffles and rewards. Sometimes abandoned projects need our help. If
+                    the proper initiatives are present, we can refurbish the project. This may include a
+                    re-mint of the collection. In this case $PXLB is used to access free mints. We then list the
+                    project for sale here on Projexts.
+                </h2>
+            </div>
+            <div class="question-box">
+                <h1> What is next for Projext?
+                </h1>
+                <h2> Do you want to sell the White List spots that projects offer you for your project’s token?
+                    Building your own site to do this costs thousands! We are building a platform where any project
+                    can add the White List spots they get in collabs and allow holders to spend their token. You
+                    will want to make sure you are holding a few Pixel Bots to access this helpful service.
+
+                </h2>
+            </div>
         </div>
     </section>
-
 
 </body>
 
 </html>
-<script>
+<!-- <script>
     const boxes = document.querySelectorAll(".question-box");
 
     window.addEventListener("scroll", checkBoxes);
@@ -148,10 +170,9 @@
             }
         });
     }
-</script>
+</script> -->
 <script>
     const bot = document.getElementById("bot-img");
-    const backg = document.getElementById("projexts-title");
     const build = document.getElementsByClassName("build-thingy")[0];
 
     function createHex() {
@@ -167,14 +188,17 @@
 
 
     function change() {
+        const bots = document.getElementsByClassName("bot-img");
+        for (var i = 0; i < 4; i++) {
+            let random = Math.floor(Math.random() * 4000);
+            bots[i].src = 'https://bafybeieuyeoooglcvtuehjyqj5bkavnminhuqyekmamkh7vkxwoz2neub4.ipfs.nftstorage.link/' + random + '.png'
+        }
+        // var characters = 'abcdefghijklmnopqrstu';
+        // let result = characters.charAt(Math.floor(Math.random() * 21));
+        // bot.src = "./bots/" + result + ".png"; 
 
-        var random = Math.floor(Math.random() * 4000);
-
-        var bot = document.getElementById("bot-img");
-
-        var characters = 'abcdefghijklmnopqrstu';
-        let result = characters.charAt(Math.floor(Math.random() * 21));
-        bot.src = "./bots/" + result + ".png"; var pastel = "hsl(" + 360 * Math.random() + ',' +
+        const backg = document.getElementById("projexts-title");
+        var pastel = "hsl(" + 360 * Math.random() + ',' +
             (25 + 70 * Math.random()) + '%,' +
             (85 + 10 * Math.random()) + '%)';
 
@@ -188,15 +212,16 @@
         setTimeout(function () {
             change()
             colorLoop();
-        }, 5000);
+        }, 10000);
 
     }
 
+    change()
     colorLoop();
 
 </script>
 
 <script>
-    function closeMenu() { document.getElementsByClassName("menu")[0].style.display = "none";document.getElementsByClassName("menu")[0].style.visibility = "hidden"; }
-    function openMenu() { document.getElementsByClassName("menu")[0].style.display = "block"; document.getElementsByClassName("menu")[0].style.visibility = "visible";}
+    function closeMenu() { document.getElementsByClassName("menu")[0].style.display = "none"; document.getElementsByClassName("menu")[0].style.visibility = "hidden"; }
+    function openMenu() { document.getElementsByClassName("menu")[0].style.display = "block"; document.getElementsByClassName("menu")[0].style.visibility = "visible"; }
 </script>
