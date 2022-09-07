@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="./css/market.css">
     <link rel="stylesheet" href="./css/constants.css">
-
     <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+
+
     <meta property="og:title" content="Projexts" />
-    <meta property="og:description" content="Browse. Build. Produce." />
+    <!-- <meta property="og:description" content="Browse. Build. Produce." /> -->
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://i.imgur.com/w4xPNWM.png" />
+    <meta property="og:image" content="https://i.imgur.com/2cew8H4.png" />
     <meta property="og:url" content="https://projexts.xyz" />
-    <meta property="og:site_name" content="Browse" />
+    <meta property="og:site_name" content="Market" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@SolanaPixelBots" />
     <meta name="twitter:title" content="Projexts" />
-    <meta name="twitter:description" content="Browse. Build. Produce." />
-    <meta name="twitter:image" content="https://i.imgur.com/w4xPNWM.png" />
+    <!-- <meta name="twitter:description" content="Browse. Build. Produce." /> -->
+    <meta name="twitter:image" content="https://i.imgur.com/2cew8H4.png" />
     <meta content="#0b0b0b" data-react-helmet="true" name="theme-color" />
 
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
     <title> Project Marketplace </title>
 </head>
 
@@ -59,7 +60,7 @@
     <main class="main-market">
         <section class="entry-box">
             <div class="entry-title">
-                <h1>Projext <a class="gradient"> Market<i class='bx bx-store-alt'></i></a></h1>
+                <h1>Projexts <a class="gradient"> Market<i class='bx bx-store-alt'></i></a></h1>
             </div>
             <div class="entry-desc">
                 <h1> Browse through projects. Click to inspect the project. View the projects profile. <br>
@@ -69,11 +70,24 @@
         </section>
         <section class="market-box">
             <div class="market-title">
-                <h1 id="type"> </h1>
+                <h1> Projects <a class="view-more" href="./browse.html?project">More →</a>
+                </h1>
             </div>
-            <market id="market" class="display-box"></market>
+            <market id="project" class="display-box"></market>
         </section>
-
+        <section class="market-box">
+            <div class="market-title">
+                <h1> Utilities <a class="view-more" href="./browse.html?utility">More →</a>
+                </h1>
+            </div>
+            <market id="utility" class="display-box"></market>
+        </section>
+        <section class="market-box">
+            <div class="market-title">
+                <h1> Artists <a class="view-more" href="./browse.html?artist">More →</a></h1>
+            </div>
+            <market id="artist" class="display-box"></market>
+        </section>
     </main>
     <footer>
         <div class="gradient">Projexts © 2022</div>
@@ -83,43 +97,62 @@
 </body>
 
 </html>
-<script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
 <script>
-    function loadPage() {
-        const xhttp = new XMLHttpRequest();
+    function loadPage(type) {
+        var xhttp = new XMLHttpRequest();
         xhttp.onload = function (data) {
-            var symbol = location.href.substring(location.href.indexOf("?") + 1);
-            console.log(symbol)
-            document.getElementById("type").innerHTML = symbol.charAt(0).toUpperCase() + symbol.slice(1);
-            var collect = JSON.parse(this.responseText);
-            var market = document.getElementById("market");
-            for (var i = collect.length - 1; i >= 0; i--) {
-                if (collect[i]["type"] == symbol) {
-
-                    let div1 = document.createElement("a");
-                    let img = document.createElement("img");
-                    let div2 = document.createElement("div");
-                    let div3 = document.createElement("div");
-                    let div4 = document.createElement("div");
-                    div1.classList.add("project-box");
-                    div1.href = "./project.html?" + collect[i]["symbol"];
-                    img.src = collect[i]['image'];
-                    div2.classList.add("lower-box");
-                    div3.classList.add("name");
-                    div3.innerHTML = collect[i]["name"];
-                    div4.innerHTML = collect[i]["service"];
-                    div1.appendChild(img)
-                    div2.appendChild(div3)
-                    div2.appendChild(div4)
-                    div1.appendChild(div2)
-                    market.appendChild(div1)
-                }
+            var response = JSON.parse(this.responseText);
+            var collect = response.reverse();
+            var i = 0;
+            for (i < collect.length; i < 4; i++) {
+                buildDOM(collect[i], type)
             }
         }
-        xhttp.open("GET", "https://api.projexts.xyz/collections", true);
+        xhttp.open("GET", "https://api.projexts.xyz/collection/" + type, true);
         xhttp.send();
     }
 
+    function buildDOM(collect, type) {
+        var market = document.getElementById(type);
+        let div1 = document.createElement("a");
+        let img = document.createElement("img");
+        let div2 = document.createElement("div");
+        let div3 = document.createElement("div");
+        let div4 = document.createElement("div");
+        let chain = document.createElement("p");
+        chain.classList.add("chain-symbol");
+        chain.innerHTML = "◎";
+        
+        div1.classList.add("project-box");
+        div1.href = "./project.html?" + collect["symbol"];
+        img.src = collect['image'];
+        div2.classList.add("lower-box");
+        div3.classList.add("name");
+        div4.classList.add("desc");
 
-    loadPage();
+        div3.innerHTML = collect["name"];
+        div4.innerHTML = collect["service"];
+        // div3.appendChild(chain);
+        div1.appendChild(img)
+        div2.appendChild(div3)
+        div2.appendChild(div4)
+        div1.appendChild(div2)
+        market.appendChild(div1)
+    }
+    function startLoad() {
+        var types = ["project", "utility", "artist"]
+        for (var i = 0; i < types.length; i++) {
+            console.log(types[i])
+            loadPage(types[i]);
+        }
+    }
+    startLoad()
+</script>
+<script>
+
+    function closeMenu() {document.getElementsByClassName("menu")[0].style.visibility = "hidden";}
+    function openMenu() {document.getElementsByClassName("menu")[0].style.visibility = "visible";}
+
+
+
 </script>

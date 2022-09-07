@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/market.css">
-    <link rel="stylesheet" href="./css/constants.css">
-    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
 
+
+    <link rel="stylesheet" href="./css/constants.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
 
     <meta property="og:title" content="Projexts" />
     <!-- <meta property="og:description" content="Browse. Build. Produce." /> -->
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://i.imgur.com/2cew8H4.png" />
     <meta property="og:url" content="https://projexts.xyz" />
-    <meta property="og:site_name" content="Market" />
+    <meta property="og:site_name" content="Home" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@SolanaPixelBots" />
     <meta name="twitter:title" content="Projexts" />
@@ -24,15 +25,16 @@
 
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
-    <title> Project Marketplace </title>
+    <title> Projexts - Marketplace </title>
 </head>
 
 <body>
+
     <nav>
-        <a href="https://www.projexts.xyz/">
+        <a href="./index.html">
             <div class="link"><i class='bx bx-home'></i></div>
         </a>
-        <a href="https://market.projexts.xyz/">
+        <a href="./market.html">
             <div class="link active"><i class='bx bx-store'></i></div>
         </a>
         <a href="https://twitter.com/SolanaPixelBots">
@@ -48,8 +50,8 @@
     <menu class="menu">
         <a onclick="closeMenu()" class="menu-close"><i class='bx bx-x'></i></a>
         <div class="inner">
-            <div class="menu-link"><a href="https://www.projexts.xyz/"><i class='bx bx-home'></i></a></div>
-            <div class="menu-link menu-active"><a href="https://market.projexts.xyz/"><i class='bx bx-store'></i></a>
+            <div class="menu-link"><a href="./index.html"><i class='bx bx-home'></i></a></div>
+            <div class="menu-link menu-active"><a href="./market.html"><i class='bx bx-store'></i></a>
             </div>
             <div class="menu-link"><a href="https://twitter.com/SolanaPixelBots"><i class='bx bxl-twitter'></i></a>
             </div>
@@ -57,102 +59,178 @@
                         class='bx bxl-discord-alt'></i></a></div>
         </div>
     </menu>
-    <main class="main-market">
-        <section class="entry-box">
-            <div class="entry-title">
-                <h1>Projexts <a class="gradient"> Market<i class='bx bx-store-alt'></i></a></h1>
+    <section class="intro-screen">
+        <div class="left-side">
+            <h1>
+                <text class="gradient title">Projexts</text>
+                <br>
+                <text class="text">The only <strong id="projexts-title">marketplace</strong> to buy and sell entire NFT
+                    projects.</text>
+            </h1>
+        </div>
+        <div class="right-side">
+            <div class="right-inner">
+                <img class="bot-img" src="./img/bot.png">
+                <img class="bot-img" src="./img/bot.png">
+                <img class="bot-img" src="./img/bot.png">
+                <img class="bot-img" src="./img/bot.png">
             </div>
-            <div class="entry-desc">
-                <h1> Browse through projects. Click to inspect the project. View the projects profile. <br>
-                    From there you can contact them or open a ticket in our server to start the process.<br><br>
-                    Additionally we have utilities listed for personal and community use.</h1>
+
+        </div>
+    </section>
+    <section class="section-2">
+        <div class="box ">
+            <div class="info"><span><text>Purchase an existing NFT project and all its assets</text></span>
             </div>
-        </section>
-        <section class="market-box">
-            <div class="market-title">
-                <h1> Projects <a class="view-more" href="./browse.html?project">More →</a>
+            <div class="info"><span><text>Have our experienced team develop a custom project to your
+                        liking</text></span></div>
+            <div class="info"><span><text>Browse useful services for your new or existing NFT project</text></span>
+            </div>
+            <div class="info"><span><text>Sell your minted or unminted project to a new owner</text></span></div>
+        </div>
+    </section>
+    <section class="section-3">
+        <div class="section-title">
+            <strong class="title gradient">Questions</strong>
+        </div>
+
+        <div class="box-grid">
+            <div class="question-box">
+                <h1> Why buy an NFT project? </h1>
+                <h2><strong class="gradient">Community.</strong> In the NFT space, a community is one of your most important utilities. By purchasing
+                    an existing project, you can adopt an entire community.<br><br>
+                    <strong class="gradient">Time.</strong> It takes a tremendous amount of time and effort to create a project from scratch when you
+                    are not sure where to start. This hassle-free process will save you a lot of useful time.</h2>
+            </div>
+            <div class="question-box">
+                <h1> Why sell your project? </h1>
+                <h2> <strong class="gradient">Build to sell.</strong> If you know what you are doing, you can build a
+                    project to sell to a new
+                    business.<br><br>
+                    <strong class="gradient">Don’t rug, sell.</strong> Many people decide that running a project is too much work after they have
+                    already created one. After they have earned some quick cash, they throw away copious value and
+                    abandon the investors. We call this “rugging.” Why not sell the project to someone that is willing
+                    to take over?</h2>
+            </div>
+            <div class="question-box">
+                <h1> How do I know I won’t be scammed? </h1>
+                <h2> We can connect <strong class="gradient">buyers and seller</strong> for free, but you must transact at your
+                    own risk. However, you can contract us as middlemen to ensure no party is wronged! For this we
+                    take a small fee, but we handle transferring authorities of the assets.</h2>
+            </div>
+            <div class="question-box">
+                <h1> What else can I find here? </h1>
+                <h2>
+                    We offer a <strong class="gradient">wide range</strong> of services such as utilities at a discounted price, new and upcoming artists
+                    and developers for hire.
+
+                </h2>
+            </div>
+            <div class="question-box">
+                <h1> What is our NFT? </h1>
+                <h2> <strong class="gradient">Pixel Bots</strong> is our NFT collection on Solana. Owning a Pixel Bot allows you to earn $PXLB.
+                    This token can be used for raffles and rewards. Sometimes abandoned projects need our help. If
+                    the proper initiatives are present, we can refurbish the project.<br><br>This may include a
+                    re-mint of the collection. In this case $PXLB is used to access free mints. We then list the
+                    project for sale here on Projexts.
+                </h2>
+            </div>
+            <div class="question-box">
+                <h1> Where can I contact Projexts?
                 </h1>
+                <h2>
+                    <a class="gradient question-link" href="mailto:botzsolana@gmail.com"
+                        target="_blank"><strong>Mail</strong></a><br>
+                    <a class="gradient question-link" href="https://discord.gg/pixelbots"
+                        target="_blank"><strong>Twitter</strong></a><br>
+                    <a class="gradient question-link" href="https://twitter.com/SolanaPixelBots"
+                        target="_blank"><strong>Discord</strong></a>
+                </h2>
             </div>
-            <market id="project" class="display-box"></market>
-        </section>
-        <section class="market-box">
-            <div class="market-title">
-                <h1> Utilities <a class="view-more" href="./browse.html?utility">More →</a>
-                </h1>
-            </div>
-            <market id="utility" class="display-box"></market>
-        </section>
-        <section class="market-box">
-            <div class="market-title">
-                <h1> Artists <a class="view-more" href="./browse.html?artist">More →</a></h1>
-            </div>
-            <market id="artist" class="display-box"></market>
-        </section>
-    </main>
+        </div>
+    </section>
     <footer>
         <div class="gradient">Projexts © 2022</div>
         <div class="gradient"><a href="https://twitter.com/SolanaPixelBots" target="_blank"><i class='bx bxl-twitter'></i></a></div>
         <div class="gradient"><a href="https://discord.gg/pixelbots" target="_blank"><i class='bx bxl-discord-alt'></i></a></div>
     </footer>
+
 </body>
 
 </html>
+<!-- <script>
+    const boxes = document.querySelectorAll(".question-box");
+
+    window.addEventListener("scroll", checkBoxes);
+
+    checkBoxes();
+
+    function checkBoxes() {
+        const triggerBottom = (window.innerHeight / 4) * 4;
+
+        boxes.forEach((box) => {
+            const boxTop = box.getBoundingClientRect().top;
+
+            if (boxTop < triggerBottom) {
+                box.classList.add("show");
+            } else {
+                box.classList.remove("show");
+            }
+        });
+    }
+</script> -->
 <script>
-    function loadPage(type) {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onload = function (data) {
-            var response = JSON.parse(this.responseText);
-            var collect = response.reverse();
-            var i = 0;
-            for (i < collect.length; i < 4; i++) {
-                buildDOM(collect[i], type)
+    const bot = document.getElementById("bot-img");
+    const build = document.getElementsByClassName("build-thingy")[0];
+
+    function createHex() {
+        var hexCode1 = "";
+        var hexValues1 = "0123456789abcdef";
+
+        for (var i = 0; i < 6; i++) {
+            hexCode1 += hexValues1.charAt(Math.floor(Math.random() * hexValues1.length));
+        }
+        return hexCode1;
+    }
+
+
+
+    function change() {
+        const bots = document.getElementsByClassName("bot-img");
+        for (var i = 0; i < 4; i++) {
+            let random = Math.floor(Math.random() * 4000);
+            try {
+                bots[i].src = 'https://bafybeieuyeoooglcvtuehjyqj5bkavnminhuqyekmamkh7vkxwoz2neub4.ipfs.nftstorage.link/' + random + '.png'
+            } catch {
+                bots[i].src = "./img/bot.png"
             }
         }
-        xhttp.open("GET", "https://api.projexts.xyz/collection/" + type, true);
-        xhttp.send();
+
+        const backg = document.getElementById("projexts-title");
+        var pastel = "hsl(" + 360 * Math.random() + ',' +
+            (25 + 70 * Math.random()) + '%,' +
+            (85 + 10 * Math.random()) + '%)';
+
+        backg.style.color = pastel;
     }
 
-    function buildDOM(collect, type) {
-        var market = document.getElementById(type);
-        let div1 = document.createElement("a");
-        let img = document.createElement("img");
-        let div2 = document.createElement("div");
-        let div3 = document.createElement("div");
-        let div4 = document.createElement("div");
-        let chain = document.createElement("p");
-        chain.classList.add("chain-symbol");
-        chain.innerHTML = "◎";
-        
-        div1.classList.add("project-box");
-        div1.href = "./project.html?" + collect["symbol"];
-        img.src = collect['image'];
-        div2.classList.add("lower-box");
-        div3.classList.add("name");
-        div4.classList.add("desc");
 
-        div3.innerHTML = collect["name"];
-        div4.innerHTML = collect["service"];
-        // div3.appendChild(chain);
-        div1.appendChild(img)
-        div2.appendChild(div3)
-        div2.appendChild(div4)
-        div1.appendChild(div2)
-        market.appendChild(div1)
+
+
+    var colorLoop = function () {
+        setTimeout(function () {
+            change()
+            colorLoop();
+        }, 10000);
+
     }
-    function startLoad() {
-        var types = ["project", "utility", "artist"]
-        for (var i = 0; i < types.length; i++) {
-            console.log(types[i])
-            loadPage(types[i]);
-        }
-    }
-    startLoad()
+
+    change()
+    colorLoop();
+
 </script>
+
 <script>
-
-    function closeMenu() {document.getElementsByClassName("menu")[0].style.visibility = "hidden";}
-    function openMenu() {document.getElementsByClassName("menu")[0].style.visibility = "visible";}
-
-
-
+    function closeMenu() { document.getElementsByClassName("menu")[0].style.display = "none"; document.getElementsByClassName("menu")[0].style.visibility = "hidden"; }
+    function openMenu() { document.getElementsByClassName("menu")[0].style.display = "block"; document.getElementsByClassName("menu")[0].style.visibility = "visible"; }
 </script>
