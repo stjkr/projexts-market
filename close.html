@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
+
+
     <link rel="stylesheet" href="./css/constants.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
@@ -98,17 +98,19 @@
             <div class="question-box">
                 <h1> Why buy an NFT project? </h1>
                 <h2>Community. In the NFT space, a community is one of your most important utilities. By purchasing
-                    an existing project, you can adopt an entire community.
+                    an existing project, you can adopt an entire community.<br><br>
                     Time. It takes a tremendous amount of time and effort to create a project from scratch when you
                     are not sure where to start. This hassle-free process will save you a lot of useful time.</h2>
             </div>
             <div class="question-box">
                 <h1> Why sell your project? </h1>
-                <h2> <strong class="gradient">Build to sell.</strong> If you know what you are doing, you can build a project to sell to a new
+                <h2> <strong class="gradient">Build to sell.</strong> If you know what you are doing, you can build a
+                    project to sell to a new
                     business.
                     Don’t rug, sell. Many people decide that running a project is too much work after they have
                     already created one. After they have earned some quick cash, they throw away copious value and
-                    abandon the investors. We call this “rugging.” Why not sell the project to someone that is willing to take over?</h2>
+                    abandon the investors. We call this “rugging.” Why not sell the project to someone that is willing
+                    to take over?</h2>
             </div>
             <div class="question-box">
                 <h1> How do I know I won’t be scammed? </h1>
@@ -137,11 +139,14 @@
                 <h1> Where can I contact Projexts?
                 </h1>
                 <h2>
-                    <a class="gradient" href="mailto:botzsolana@gmail.com"><strong>Mail</strong></a><br>
-                    <a class="gradient" href="https://discord.gg/pixelbots" target="_blank"><strong>Twitter</strong></a><br>
-                    <a class="gradient" href="https://twitter.com/SolanaPixelBots" target="_blank"><strong>Discord</strong></a>
-            </h2>
-                </div>
+                    <a class="gradient question-link" href="mailto:botzsolana@gmail.com"
+                        target="_blank"><strong>Mail</strong></a><br>
+                    <a class="gradient question-link" href="https://discord.gg/pixelbots"
+                        target="_blank"><strong>Twitter</strong></a><br>
+                    <a class="gradient question-link" href="https://twitter.com/SolanaPixelBots"
+                        target="_blank"><strong>Discord</strong></a>
+                </h2>
+            </div>
         </div>
     </section>
 
@@ -189,8 +194,8 @@
         const bots = document.getElementsByClassName("bot-img");
         for (var i = 0; i < 4; i++) {
             let random = Math.floor(Math.random() * 4000);
-            try{
-            bots[i].src = 'https://bafybeieuyeoooglcvtuehjyqj5bkavnminhuqyekmamkh7vkxwoz2neub4.ipfs.nftstorage.link/' + random + '.png'
+            try {
+                bots[i].src = 'https://bafybeieuyeoooglcvtuehjyqj5bkavnminhuqyekmamkh7vkxwoz2neub4.ipfs.nftstorage.link/' + random + '.png'
             } catch {
                 bots[i].src = "./img/bot.png"
             }
