@@ -10,7 +10,30 @@
 
 }
 
+body{
+    background-image: url(../svg/curve-up.svg), url(../svg/curve-down.svg);
+    background-size: 100%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom, top;
+}
 
+@media screen and (max-width: 1100px) {
+    body{
+        background-size: 200%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body{
+        background-size: 300%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body{
+        background-size: 400%;
+    }
+}
 
 section {
     margin: 50px 0px;

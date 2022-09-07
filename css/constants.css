@@ -52,9 +52,28 @@ body {
 }
 
 body{
-    background-image: url(../svg/curve-up.svg), url(../svg/curve-down.svg);
-    background-repeat: no-repeat, no-repeat;
-    background-position: bottom, top;
+    background-image: url(../svg/curve-down.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+@media screen and (max-width: 1100px) {
+    body{
+        background-size: 200%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body{
+        background-size: 300%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body{
+        background-size: 400%;
+    }
 }
 
 a{
