@@ -16,6 +16,7 @@ body{
     background-repeat: no-repeat, no-repeat;
     background-position: bottom, top;
     
+    
 }
 
 @media screen and (max-width: 1100px) {
@@ -103,38 +104,28 @@ section {
 
 
 
-.section-2 .box {
+.box {
     padding: 25px;
     border-radius: 25px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    border: 2px solid #1d1d1d;
-    background-color: #0b0b0b;
-    opacity: 1;
-    background-image:  linear-gradient(#212121 2px, transparent 2px), linear-gradient(90deg, #212121 2px, transparent 2px), linear-gradient(#212121 1px, transparent 1px), linear-gradient(90deg, #212121 1px, #0b0b0b 1px);
-    background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
-    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+    border: 2px solid #1e1e1e;
+    background-image: url(../svg/curve-up.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
     transition: all 1s;
-    /* transition: border 1s; */
-    /* background: linear-gradient(90deg, #780206, #061161); */
-    /* background: linear-gradient(90deg, hsla(232, 73%, 65%, 1) 0%, hsla(279, 33%, 48%, 1) 100%); */
-    /* background: radial-gradient( rgba(35, 37, 38, 0.5), rgba(65, 67, 69, 0.5)); */
-    /* background: linear-gradient(90deg, hsla(195, 86%, 50%, 1) 0%, hsla(236, 93%, 65%, 1) 100%);
-    background: linear-gradient(90deg, hsla(225, 40%, 54%, 1) 0%, hsla(284, 75%, 54%, 1) 100%); */
-    /* background: linear-gradient(90deg, hsla(248, 21%, 15%, 1) 0%, hsla(250, 14%, 61%, 1) 100%); */
-    /* background: #111111; */
 }
 
-.box:hover{
-    background-color: #0b0b0b;
-    opacity: 1;
-    background-image:  linear-gradient(#212121 2.6px, transparent 2.6px), linear-gradient(90deg, #212121 2.6px, transparent 2.6px), linear-gradient(#212121 1.3px, transparent 1.3px), linear-gradient(90deg, #212121 1.3px, #0b0b0b 1.3px);
-    background-size: 60px 60px, 60px 60px, 12px 12px, 12px 12px;
-    background-position: -2.6px -2.6px, -2.6px -2.6px, -1.3px -1.3px, -1.3px -1.3px;
+@media screen and (max-width: 800px){
+    .box{
+        background-size: 200%; 
+    }
 }
 
-.section-2 .box:hover {
+
+.box:hover {
     border: 2px solid #707070;
 }
 
@@ -203,7 +194,7 @@ section {
 }
 
 .question-link{
-    font-size: 30px;
+    font-size: 24px;
 }
 
 
