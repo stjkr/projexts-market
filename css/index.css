@@ -43,7 +43,7 @@ section {
 
 .intro-screen {
     width: 100%;
-    min-height: 80%;
+    min-height: 70%;
     box-sizing: border-box;
     text-align: center;
     display: grid;

@@ -75,6 +75,11 @@
         </section>
 
     </main>
+    <footer>
+        <div class="gradient">Projexts © 2022</div>
+        <div class="gradient"><a href="https://twitter.com/SolanaPixelBots" target="_blank"><i class='bx bxl-twitter'></i></a></div>
+        <div class="gradient"><a href="https://discord.gg/pixelbots" target="_blank"><i class='bx bxl-discord-alt'></i></a></div>
+    </footer>
 </body>
 
 </html>
@@ -95,14 +100,17 @@
                     let img = document.createElement("img");
                     let div2 = document.createElement("div");
                     let div3 = document.createElement("div");
+                    let div4 = document.createElement("div");
                     div1.classList.add("project-box");
                     div1.href = "./project.html?" + collect[i]["symbol"];
                     img.src = collect[i]['image'];
                     div2.classList.add("lower-box");
                     div3.classList.add("name");
                     div3.innerHTML = collect[i]["name"];
+                    div4.innerHTML = collect[i]["service"];
                     div1.appendChild(img)
                     div2.appendChild(div3)
+                    div2.appendChild(div4)
                     div1.appendChild(div2)
                     market.appendChild(div1)
                 }

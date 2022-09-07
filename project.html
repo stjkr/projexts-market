@@ -61,9 +61,13 @@
         <div class="project-profile">
         </div>
         <div class="slideshow">
-            <!-- <div class="slide-overlay"></div> -->
         </div>
     </section>
+    <footer>
+        <div class="gradient">Projexts © 2022</div>
+        <div class="gradient"><a href="https://twitter.com/SolanaPixelBots" target="_blank"><i class='bx bxl-twitter'></i></a></div>
+        <div class="gradient"><a href="https://discord.gg/pixelbots" target="_blank"><i class='bx bxl-discord-alt'></i></a></div>
+    </footer>
 </body>
 
 </html>
@@ -130,9 +134,13 @@
             let h1 = document.createElement("p");
             h1.innerHTML = collect["name"];
 
+
+
+
             let label = document.createElement("label");
             label.classList.add("asking-price");
             label.innerHTML = "Price: " + collect["asking"];
+
 
             if (collect["discord"] != "") {
                 let a1 = document.createElement("a");
@@ -148,7 +156,7 @@
                 let a2 = document.createElement("a");
                 let i2 = document.createElement("i");
                 i2.classList.add("bx", "bxl-twitter");
-                a2.href = "https://twittter.com/" + collect["twitter"];
+                a2.href = "https://twitter.com/" + collect["twitter"];
                 a2.target = "_blank";
                 a2.appendChild(i2);
                 div1.appendChild(a2);
@@ -172,6 +180,13 @@
             a4.appendChild(i4);
             div1.appendChild(a4);
 
+            let a5 = document.createElement("a");
+            let i5 = document.createElement("i");
+
+            // a5.innerHTML = "◎";
+            // a5.appendChild(i5);
+            // div1.appendChild(a5);
+
             let div2 = document.createElement("div");
             div2.classList.add("box", "info")
             div2.innerHTML = "<h1>About</h1>" + collect["desc"]
@@ -179,7 +194,14 @@
 
 
             div1.appendChild(h1)
+            if (collect["type"] === "utility") {
+                let service = document.createElement("label");
+                service.classList.add("asking-price");
+                service.innerHTML = collect["service"] + "<br><br>";
+                div1.appendChild(service)
+            }
             div1.appendChild(label)
+            
 
             // profile.appendChild(img)
             profile.appendChild(div1)
