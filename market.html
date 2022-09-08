@@ -63,11 +63,14 @@
                 <h1>Projexts <a class="gradient"> Market<i class='bx bx-store-alt'></i></a></h1>
             </div>
             <div class="entry-desc">
-                <h1> Browse through projects, utilities and artists. Click to inspect and view the listing's profile. <br>
+                <h1> Browse through projects, utilities and artists. Click to inspect and view the listing's profile.
+                    <br>
                     From there you can contact them or open a ticket in our server to start the process.<br><br>
-                    Enquire about being listed or purchasing a listing <strong><a class="gradient" href="https://ptb.discord.com/channels/992030660648779866/1001909517111533619/1014888636044562492" target="_blank">here.</a></strong>
-                
-                
+                    Enquire about being listed or purchasing a listing <strong><a class="gradient"
+                            href="https://ptb.discord.com/channels/992030660648779866/1001909517111533619/1014888636044562492"
+                            target="_blank">here.</a></strong>
+
+
                 </h1>
             </div>
         </section>
@@ -94,62 +97,13 @@
     </main>
     <footer>
         <div class="gradient">Projexts © 2022</div>
-        <div class="gradient"><a href="https://twitter.com/SolanaPixelBots" target="_blank"><i class='bx bxl-twitter'></i></a></div>
-        <div class="gradient"><a href="https://discord.gg/pixelbots" target="_blank"><i class='bx bxl-discord-alt'></i></a></div>
+        <div class="gradient"><a href="https://twitter.com/SolanaPixelBots" target="_blank"><i
+                    class='bx bxl-twitter'></i></a></div>
+        <div class="gradient"><a href="https://discord.gg/pixelbots" target="_blank"><i
+                    class='bx bxl-discord-alt'></i></a></div>
     </footer>
 </body>
 
 </html>
-<script>
-    function loadPage(type) {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onload = function (data) {
-            var response = JSON.parse(this.responseText);
-            var collect = response.reverse();
-            var i = 0;
-            for (i < collect.length; i < 4; i++) {
-                buildDOM(collect[i], type)
-            }
-        }
-        xhttp.open("GET", "https://api.projexts.xyz/collection/" + type, true);
-        xhttp.send();
-    }
-
-    function buildDOM(collect, type) {
-        var market = document.getElementById(type);
-        let div1 = document.createElement("a");
-        let img = document.createElement("img");
-        let div2 = document.createElement("div");
-        let div3 = document.createElement("div");
-        let div4 = document.createElement("div");
-        let chain = document.createElement("p");
-        chain.classList.add("chain-symbol");
-        chain.innerHTML = "◎";
-        
-        div1.classList.add("project-box");
-        div1.href = "./project.html?" + collect["symbol"];
-        img.src = collect['image'];
-        div2.classList.add("lower-box");
-        div3.classList.add("name");
-        div4.classList.add("desc");
-
-        div3.innerHTML = collect["name"];
-        div4.innerHTML = collect["service"];
-        // div3.appendChild(chain);
-        div1.appendChild(img)
-        div2.appendChild(div3)
-        div2.appendChild(div4)
-        div1.appendChild(div2)
-        market.appendChild(div1)
-    }
-    function startLoad() {
-        var types = ["project", "utility", "artist"]
-        for (var i = 0; i < types.length; i++) {
-            console.log(types[i])
-            loadPage(types[i]);
-        }
-    }
-    startLoad()
-</script>
+<script src="./js/market.js"></script>
 <script src="./js/menu.js"></script>
-

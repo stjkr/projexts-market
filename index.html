@@ -158,7 +158,7 @@
 </body>
 
 </html>
-<!-- <script>
+<script>
     const boxes = document.querySelectorAll(".question-box");
 
     window.addEventListener("scroll", checkBoxes);
@@ -178,56 +178,6 @@
             }
         });
     }
-</script> -->
-<script>
-    const bot = document.getElementById("bot-img");
-    const build = document.getElementsByClassName("build-thingy")[0];
-
-    function createHex() {
-        var hexCode1 = "";
-        var hexValues1 = "0123456789abcdef";
-
-        for (var i = 0; i < 6; i++) {
-            hexCode1 += hexValues1.charAt(Math.floor(Math.random() * hexValues1.length));
-        }
-        return hexCode1;
-    }
-
-
-
-    function change() {
-        const bots = document.getElementsByClassName("bot-img");
-        for (var i = 0; i < 4; i++) {
-            let random = Math.floor(Math.random() * 4000);
-            try {
-                bots[i].src = 'https://bafybeieuyeoooglcvtuehjyqj5bkavnminhuqyekmamkh7vkxwoz2neub4.ipfs.nftstorage.link/' + random + '.png'
-            } catch {
-                bots[i].src = "./img/bot.png"
-            }
-        }
-
-        const backg = document.getElementById("projexts-title");
-        var pastel = "hsl(" + 360 * Math.random() + ',' +
-            (25 + 70 * Math.random()) + '%,' +
-            (85 + 10 * Math.random()) + '%)';
-
-        backg.style.color = pastel;
-    }
-
-
-
-
-    var colorLoop = function () {
-        setTimeout(function () {
-            change()
-            colorLoop();
-        }, 10000);
-
-    }
-
-    change()
-    colorLoop();
-
 </script>
-
+<script src="./js/index.js"></script>
 <script src="./js/menu.js"></script>
