@@ -124,11 +124,8 @@ nav {
     font-weight: 900;
 }
 
-.link a i {
-    display: inline;
-    align-items: center;
-    justify-content: center;
-
+.ME-link {
+    width: 22px;
 }
 
 .logo-img{
